@@ -1,0 +1,19 @@
+{
+  "name": "dispatch-x402",
+  "version": "1.0.0",
+  "description": "x402 Aggregator Meta-API — paid routing layer for the agent-commerce fleet",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test_routing.cjs"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@coinbase/x402": "^2.1.0",
+    "@x402/core": "^2.12.0",
+    "@x402/evm": "^2.12.0",
+    "@x402/express": "^2.12.0",
+    "@x402/extensions": "^2.12.0",
+    "express": "^5.2.1"
+  }
+}
