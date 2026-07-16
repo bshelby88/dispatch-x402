@@ -193,6 +193,186 @@ app.use((req, res, next) => {
   next();
 });
 
+// --- OpenAPI discovery -------------------------------------------------------
+app.get("/openapi.json", (_req, res) => {
+  const paths = {
+    "/classify": {
+      post: {
+        operationId: "classifyIntent",
+        summary: "Classify (free) — preview route + confidence for an agent intent",
+        tags: ["Routing"],
+        security: [],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  intent: { type: "string", minLength: 2, description: "Natural-language task to route" },
+                },
+                required: ["intent"],
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Classification result (free — no charge regardless of tier)",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    ok: { type: "boolean" },
+                    intent: { type: "string" },
+                    tier: { type: "string", enum: ["auto", "confirm", "ambiguous"] },
+                    confidence: { type: "number" },
+                    route: { type: "object", nullable: true },
+                    note: { type: "string" },
+                  },
+                  required: ["ok"],
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/dispatch": {
+      post: {
+        operationId: "dispatch",
+        summary: "Dispatch ($0.50) — authoritative paid routing to the right fleet service",
+        tags: ["Routing"],
+        "x-payment-info": {
+          price: { mode: "fixed", currency: "USD", amount: "0.500000" },
+          protocols: [{ x402: {} }],
+        },
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  intent: { type: "string", minLength: 2, description: "Natural-language task to route to the fleet" },
+                  params: { type: "object", description: "Optional downstream params to merge into call instructions" },
+                },
+                required: ["intent"],
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Authoritative routing decision with call instructions",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    ok: { type: "boolean" },
+                    intent: { type: "string" },
+                    tier: { type: "string", enum: ["auto", "confirm", "ambiguous"] },
+                    confidence: { type: "number" },
+                    route: {
+                      type: "object",
+                      properties: {
+                        id: { type: "string" },
+                        name: { type: "string" },
+                        base: { type: "string" },
+                        endpoint: { type: "string" },
+                        price: { type: "string" },
+                      },
+                    },
+                    call: {
+                      type: "object",
+                      properties: {
+                        method: { type: "string" },
+                        url: { type: "string" },
+                        price: { type: "string" },
+                        network: { type: "string" },
+                        payment: { type: "string" },
+                        suggested_body: { type: "object" },
+                        terms_doc: { type: "string" },
+                      },
+                    },
+                    params: { type: "object" },
+                    note: { type: "string" },
+                  },
+                  required: ["ok"],
+                },
+              },
+            },
+          },
+          "402": { description: "Payment Required — x402 challenge with USDC on Base" },
+        },
+      },
+    },
+    "/api/services": {
+      get: {
+        operationId: "listServices",
+        summary: "List all fleet services registered in the dispatch router",
+        tags: ["Catalog"],
+        security: [],
+        responses: {
+          "200": {
+            description: "Array of available fleet services with base URLs and prices",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    count: { type: "integer" },
+                    services: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          id: { type: "string" },
+                          name: { type: "string" },
+                          base: { type: "string" },
+                          endpoint: { type: "string" },
+                          price: { type: "string" },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  };
+
+  res.json({
+    openapi: "3.1.0",
+    info: {
+      title: "Dispatch — x402 Aggregator Meta-API",
+      version: "1.0.0",
+      description:
+        "Paid routing layer for the Royal Agentic Enterprises fleet. " +
+        "One paid endpoint that routes an agent's natural-language intent to the right paid fleet service. " +
+        "Free /classify previews the route + confidence; paid /dispatch ($0.50) returns the authoritative route, " +
+        "extracted params, and ready-to-use call instructions. Routing itself is the priced primitive. " +
+        `Currently routes to ${SERVICES.length} paid services.`,
+      "x-guidance":
+        "1. Call GET /api/services for the current fleet catalog. " +
+        "2. Call POST /classify (free) with your intent to preview routing confidence. " +
+        "3. Call POST /dispatch (x402, $0.50 USDC on Base) with your intent to get authoritative routing + call instructions. " +
+        "4. Use the returned call.url + call.method to invoke the downstream service — it also uses x402.",
+      contact: {
+        email: "jadedfocus@gmail.com",
+        name: "Royal Agentic Enterprises",
+      },
+    },
+    servers: [{ url: "https://dispatch-x402.fly.dev" }],
+    paths,
+  });
+});
+
 // --- free endpoints ----------------------------------------------------------
 app.get("/health", (_req, res) =>
   res.json({ status: "ok", service: "dispatch-x402", services: SERVICES.length })
