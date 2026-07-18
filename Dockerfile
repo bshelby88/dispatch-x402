@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --omit=dev
 
-COPY index.js registry.js *.cjs ./
+COPY index.js registry.js toon_middleware.js *.cjs ./
 
 ENV PORT=3000
 EXPOSE 3000
