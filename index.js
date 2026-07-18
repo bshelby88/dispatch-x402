@@ -1,4 +1,5 @@
 const express = require("express");
+const { toonMiddleware } = require("./toon_middleware");
 const { paymentMiddleware } = require("@x402/express");
 const { x402ResourceServer, HTTPFacilitatorClient } = require("@x402/core/server");
 const { ExactEvmScheme } = require("@x402/evm/exact/server");
@@ -218,6 +219,7 @@ x402Server.register(NETWORK, new ExactEvmScheme());
 const app = express();
 app.set("trust proxy", true);
 app.use(express.json({ limit: "1mb" }));
+app.use(toonMiddleware);
 
 // CORS + 402 cache hardening (fleet PR #381)
 app.use((req, res, next) => {

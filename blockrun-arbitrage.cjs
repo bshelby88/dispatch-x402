@@ -16,7 +16,9 @@ function ensureAgentCashWallet() {
     console.log("[Arbitrage] Initializing agentcash wallet inside container...");
     try {
       fs.mkdirSync(agentCashDir, { recursive: true });
+      const address = process.env.SENDER_ADDRESS || "0xfBC0eb7811D477E55261d956dF39f0046E192240";
       const walletConfig = {
+        address,
         privateKey: pk.startsWith("0x") ? pk : `0x${pk}`,
         createdAt: new Date().toISOString()
       };
@@ -36,7 +38,7 @@ function agentcashFetch(url, paymentHeader) {
     const cmd = `${isWin ? "npx.cmd" : "npx"} agentcash fetch "${url}" ${headerOption}`;
     exec(cmd, (error, stdout, stderr) => {
       if (error) {
-        return reject(new Error(`agentcash failed: ${stderr || error.message}`));
+        return reject(new Error(`agentcash failed: ${error.message} | stdout: ${stdout} | stderr: ${stderr}`));
       }
       try {
         resolve(JSON.parse(stdout));
