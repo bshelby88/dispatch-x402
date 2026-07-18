@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --omit=dev
 
-COPY index.js registry.js ./
+COPY index.js registry.js *.cjs ./
 
 ENV PORT=3000
 EXPOSE 3000

@@ -14,6 +14,8 @@ if (!PAY_TO) {
 const DISPATCH_PRICE = process.env.DISPATCH_PRICE || "$0.50";
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
 const CLASSIFY_MODEL = process.env.CLASSIFY_MODEL || "claude-haiku-4-5-20251001";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
 // Council confidence gate (Forge report, x402 Aggregator, 2026-06-29):
 //  >= AUTO  → high-confidence route, safe to auto-execute downstream
@@ -44,7 +46,6 @@ function keywordClassify(intent) {
 }
 
 async function llmClassify(intent) {
-  if (!ANTHROPIC_API_KEY) return null;
   const catalog = SERVICES.map(
     (s) => `- ${s.id}: ${s.intent} (expects ${JSON.stringify(s.params_hint)})`
   ).join("\n");
@@ -56,46 +57,94 @@ async function llmClassify(intent) {
     "Respond with ONLY a JSON object: " +
     '{"service_id": string|null, "confidence": number, "params": object, "reasoning": string}';
   const user = `SERVICES:\n${catalog}\n\nUSER INTENT:\n${intent}`;
-  for (let i = 0; i < 2; i++) {
-    try {
-      const r = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: {
-          "x-api-key": ANTHROPIC_API_KEY,
-          "anthropic-version": "2023-06-01",
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          model: CLASSIFY_MODEL,
-          max_tokens: 400,
-          system: sys,
-          messages: [{ role: "user", content: user }],
-        }),
-      });
-      if (!r.ok) {
+
+  // 1. Try Anthropic if key is set
+  if (ANTHROPIC_API_KEY) {
+    for (let i = 0; i < 2; i++) {
+      try {
+        const r = await fetch("https://api.anthropic.com/v1/messages", {
+          method: "POST",
+          headers: {
+            "x-api-key": ANTHROPIC_API_KEY,
+            "anthropic-version": "2023-06-01",
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            model: CLASSIFY_MODEL,
+            max_tokens: 400,
+            system: sys,
+            messages: [{ role: "user", content: user }],
+          }),
+        });
+        if (!r.ok) {
+          console.warn(`Anthropic error (HTTP ${r.status}); trying next attempt/fallback`);
+          await new Promise((res) => setTimeout(res, 1000 * (i + 1)));
+          continue;
+        }
+        const data = await r.json();
+        const text = (data.content || [])
+          .filter((b) => b.type === "text")
+          .map((b) => b.text)
+          .join("");
+        const m = text.match(/\{[\s\S]*\}/);
+        if (!m) continue;
+        const parsed = JSON.parse(m[0]);
+        const conf = Math.max(0, Math.min(1, Number(parsed.confidence) || 0));
+        return {
+          service_id: parsed.service_id || null,
+          confidence: Number(conf.toFixed(2)),
+          params: parsed.params && typeof parsed.params === "object" ? parsed.params : {},
+          reasoning: String(parsed.reasoning || ""),
+          method: "llm-anthropic",
+        };
+      } catch (e) {
+        console.warn(`Anthropic attempt failed: ${e.message}`);
         await new Promise((res) => setTimeout(res, 1000 * (i + 1)));
-        continue;
       }
-      const data = await r.json();
-      const text = (data.content || [])
-        .filter((b) => b.type === "text")
-        .map((b) => b.text)
-        .join("");
-      const m = text.match(/\{[\s\S]*\}/);
-      if (!m) continue;
-      const parsed = JSON.parse(m[0]);
-      const conf = Math.max(0, Math.min(1, Number(parsed.confidence) || 0));
-      return {
-        service_id: parsed.service_id || null,
-        confidence: Number(conf.toFixed(2)),
-        params: parsed.params && typeof parsed.params === "object" ? parsed.params : {},
-        reasoning: String(parsed.reasoning || ""),
-        method: "llm",
-      };
-    } catch (e) {
-      await new Promise((res) => setTimeout(res, 1000 * (i + 1)));
     }
   }
+
+  // 2. Try Gemini fallback if key is set
+  if (GEMINI_API_KEY) {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+    const promptText = `${sys}\n\n${user}`;
+    const payload = {
+      contents: [{ parts: [{ text: promptText }] }],
+      generationConfig: {
+        responseMimeType: "application/json"
+      }
+    };
+    for (let i = 0; i < 2; i++) {
+      try {
+        const r = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (!r.ok) {
+          console.warn(`Gemini error (HTTP ${r.status}); trying next attempt`);
+          await new Promise((res) => setTimeout(res, 1000 * (i + 1)));
+          continue;
+        }
+        const data = await r.json();
+        const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!text) continue;
+        const parsed = JSON.parse(text);
+        const conf = Math.max(0, Math.min(1, Number(parsed.confidence) || 0));
+        return {
+          service_id: parsed.service_id || null,
+          confidence: Number(conf.toFixed(2)),
+          params: parsed.params && typeof parsed.params === "object" ? parsed.params : {},
+          reasoning: String(parsed.reasoning || ""),
+          method: "llm-gemini",
+        };
+      } catch (e) {
+        console.warn(`Gemini attempt failed: ${e.message}`);
+        await new Promise((res) => setTimeout(res, 1000 * (i + 1)));
+      }
+    }
+  }
+
   return null;
 }
 
@@ -560,8 +609,92 @@ app.post("/dispatch", async (req, res) => {
   });
 });
 
+const crypto = require("crypto");
+
+app.get("/api/verify", async (req, res) => {
+  const targetUrl = req.query.target;
+  if (!targetUrl || typeof targetUrl !== "string") {
+    return res.status(400).json({ ok: false, error: "target query param required" });
+  }
+  try {
+    const manifestUrl = targetUrl.endsWith("/.well-known/x402") ? targetUrl : `${targetUrl.replace(/\/$/, "")}/.well-known/x402`;
+    const response = await fetch(manifestUrl);
+    if (response.status !== 200) {
+      return res.json({ ok: false, error: `Manifest route returned HTTP ${response.status}` });
+    }
+    const manifest = await response.json().catch(() => null);
+    if (!manifest) {
+      return res.json({ ok: false, error: "Invalid JSON in manifest" });
+    }
+    const errors = [];
+    if (!manifest.version) errors.push("Missing manifest version");
+    if (!manifest.service) errors.push("Missing service descriptor");
+    if (!manifest.endpoints || Object.keys(manifest.endpoints).length === 0) errors.push("No endpoints listed");
+    
+    const payTo = manifest.service && (manifest.service.payTo || manifest.service.pay_to);
+    if (payTo && !/^0x[a-fA-F0-9]{40}$/.test(payTo)) {
+      errors.push("Invalid EVM payTo treasury address format");
+    }
+
+    const SIGNING_SECRET = process.env.RECEIPT_SECRET || "rae-verification-secret-2026";
+    const auditPayload = {
+      timestamp: Date.now(),
+      target: targetUrl,
+      status: errors.length === 0 ? "PASSED" : "FAILED",
+      errors
+    };
+
+    const signature = crypto.createHmac("sha256", SIGNING_SECRET).update(JSON.stringify(auditPayload)).digest("hex");
+    
+    res.json({
+      ok: errors.length === 0,
+      receipt: { payload: auditPayload, signature }
+    });
+  } catch (err) {
+    res.json({ ok: false, error: `Verification failed: ${err.message}` });
+  }
+});
+
+// Alternative 1: BlockRun-Arbitrage Synthesis Route
+const { synthesizeMarketReport } = require("./blockrun-arbitrage.cjs");
+app.post("/api/arbitrage/synthesize", async (req, res) => {
+  const ticker = req.body && req.body.ticker;
+  if (!ticker || typeof ticker !== "string") {
+    return res.status(400).json({ ok: false, error: "ticker body parameter required" });
+  }
+  const result = await synthesizeMarketReport(ticker);
+  res.json(result);
+});
+
+// Alternative 4: Verification API Route (redirected target)
+const { verifyEndpoint } = require("./x402-verifier.cjs");
+app.get("/api/verify/x402", async (req, res) => {
+  const target = req.query.target;
+  if (!target || typeof target !== "string") {
+    return res.status(400).json({ ok: false, error: "target query parameter required" });
+  }
+  const result = await verifyEndpoint(target);
+  res.json(result);
+});
+
+// DTC Telegram Bot Gateway Startup
+const { fork } = require("child_process");
+const path = require("path");
+
+if (process.env.TELEGRAM_BOT_TOKEN) {
+  console.log("→ Starting Telegram Bot Gateway process...");
+  const botProcess = fork(path.join(__dirname, "telegram-gateway.cjs"), {
+    env: { ...process.env }
+  });
+  botProcess.on("error", (err) => console.error("Telegram Bot Gateway crashed:", err));
+  botProcess.on("exit", (code) => console.log("Telegram Bot Gateway exited with code:", code));
+} else {
+  console.log("→ TELEGRAM_BOT_TOKEN not set; skipping Telegram Bot Gateway startup.");
+}
+
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`→ Dispatch x402 listening on :${PORT}`);
   console.log(`→ Receive: ${PAY_TO} | price ${DISPATCH_PRICE} | services ${SERVICES.length}`);
 });
+
