@@ -694,6 +694,18 @@ if (process.env.TELEGRAM_BOT_TOKEN) {
   console.log("→ TELEGRAM_BOT_TOKEN not set; skipping Telegram Bot Gateway startup.");
 }
 
+// --- Fleet Attestation Loop (every 30 min) ---
+const { runAttestationSweep } = require("./watchdog-attestation.cjs");
+setInterval(async () => {
+  try {
+    await runAttestationSweep();
+  } catch (e) {
+    console.error("[Attestation] Sweep failed:", e.message);
+  }
+}, 30 * 60 * 1000);
+// Run once on boot
+runAttestationSweep().catch(console.error);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`→ Dispatch x402 listening on :${PORT}`);
