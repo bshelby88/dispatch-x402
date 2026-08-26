@@ -23,7 +23,7 @@ function req(method, path, body) {
       res.on("data", (d) => chunks.push(d));
       res.on("end", () => {
         let text = Buffer.concat(chunks).toString("utf8");
-        resolve({ status: res.status, headers: res.headers, body: text });
+        resolve({ status: res.statusCode, headers: res.headers, body: text });
       });
     });
     client.on("error", reject);
