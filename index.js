@@ -1,3 +1,14 @@
+const { resolveProductionRecipient } = require("./payment-config.cjs");
+
+const PAY_TO = (() => {
+  try {
+    return resolveProductionRecipient(process.env);
+  } catch (error) {
+    console.error(`FATAL: ${error.message}`);
+    process.exit(1);
+  }
+})();
+
 const express = require("express");
 const { toonMiddleware } = require("./toon_middleware");
 const { paymentMiddleware } = require("@x402/express");
@@ -5,12 +16,6 @@ const { x402ResourceServer, HTTPFacilitatorClient } = require("@x402/core/server
 const { ExactEvmScheme } = require("@x402/evm/exact/server");
 const { declareDiscoveryExtension } = require("@x402/extensions/bazaar");
 const { SERVICES, NETWORK_MAINNET } = require("./registry");
-
-const PAY_TO = process.env.X402_PAY_TO;
-if (!PAY_TO) {
-  console.error("FATAL: X402_PAY_TO required");
-  process.exit(1);
-}
 
 const DISPATCH_PRICE = process.env.DISPATCH_PRICE || "$0.50";
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
