@@ -3,6 +3,11 @@ name: Deploy to Fly
 # Git-gated deploy: the ONLY path to production.
 # Do not run `flyctl deploy` by hand from any laptop or agent — push to main instead.
 on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - ".gitignore"
   push:
     branches: [main]
     paths-ignore:
@@ -27,6 +32,7 @@ jobs:
       - run: npm test
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: test
     runs-on: ubuntu-latest
     steps:
