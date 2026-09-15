@@ -18,6 +18,12 @@ const { declareDiscoveryExtension } = require("@x402/extensions/bazaar");
 const { SERVICES, NETWORK_MAINNET } = require("./registry");
 
 const DISPATCH_PRICE = process.env.DISPATCH_PRICE || "$0.50";
+// Buyer-side settlement hint emitted in the 402 challenge (metadata only —
+// server verify/settle path unchanged). Fleet lingua-hardening pattern,
+// 2026-09-15: walls that omit `facilitator`/`serviceName` were reported
+// unbuyable by AgentPay mppscan.
+const SERVICE_NAME = "dispatch";
+const FACILITATOR_URL = "https://x402-agent-pay.com/facilitator";
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
 const CLASSIFY_MODEL = process.env.CLASSIFY_MODEL || "claude-haiku-4-5-20251001";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
@@ -479,7 +485,8 @@ app.post("/classify", async (req, res) => {
 
 // --- x402-gated route config -------------------------------------------------
 const dispatchRoute = {
-  accepts: { scheme: "exact", price: DISPATCH_PRICE, network: NETWORK, payTo: PAY_TO },
+  accepts: { scheme: "exact", price: DISPATCH_PRICE, network: NETWORK, payTo: PAY_TO, extra: { facilitator: FACILITATOR_URL } },
+  serviceName: SERVICE_NAME,
   description:
     "Route a natural-language agent intent to the correct paid fleet service. Returns the chosen " +
     "service, a calibrated confidence score, params extracted from the intent, and ready-to-use call " +

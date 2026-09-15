@@ -1,11 +1,11 @@
 {
   "name": "dispatch-x402",
   "version": "1.0.0",
-  "description": "x402 Aggregator Meta-API — paid routing layer for the agent-commerce fleet",
+  "description": "x402 Aggregator Meta-API \u2014 paid routing layer for the agent-commerce fleet",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node --test tests/payment-config.spec.cjs tests/workflow-security.spec.cjs && node test_routing.cjs && node test_toon.js"
+    "test": "node --test tests/payment-config.spec.cjs tests/workflow-security.spec.cjs tests/facilitator-emission.spec.cjs && node test_routing.cjs && node test_toon.js"
   },
   "license": "ISC",
   "dependencies": {

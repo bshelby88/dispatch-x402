@@ -13,12 +13,19 @@ test("rejects the live malformed dispatch recipient", () => {
   );
 });
 
+test("rejects a valid-but-non-canonical recipient (misroute guard)", () => {
+  assert.throws(
+    () => resolveProductionRecipient({ X402_PAY_TO: "0x9b8a2786a3df7a7837ccfc4e792e9eb90a36f72f" }),
+    /canonical fleet treasury/
+  );
+});
+
 test("rejects a missing production recipient", () => {
   assert.throws(() => resolveProductionRecipient({}), /valid EVM address/);
 });
 
 test("accepts an explicitly configured EVM recipient without guessing", () => {
-  const recipient = "0x9b8a2786a3df7a7837ccfc4e792e9eb90a36f72f";
+  const recipient = "0x7861DB4EfC14A1ed5dd8C96c528A3796560F1393";
   assert.equal(resolveProductionRecipient({ X402_PAY_TO: recipient }), recipient);
 });
 
