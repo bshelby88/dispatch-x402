@@ -180,7 +180,7 @@ test("Docker-derived runtime layout starts and serves free and x402 routes", asy
     env: {
       ...process.env,
       PORT: String(port),
-      X402_PAY_TO: "0x9b8a2786a3df7a7837ccfc4e792e9eb90a36f72f",
+      X402_PAY_TO: "0x7861DB4EfC14A1ed5dd8C96c528A3796560F1393",
     },
     stdio: ["ignore", "pipe", "pipe"],
   });
