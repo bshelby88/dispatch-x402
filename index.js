@@ -565,6 +565,58 @@ app.get("/.well-known/x402.json", (_req, res) =>
 );
 app.get("/.well-known/x402", (req, res) => res.redirect("/.well-known/x402.json"));
 
+
+// --- discovery surfaces (pricing.md / llms.txt) + free sample ---
+app.get("/sample", (_req, res) =>
+  res.json({
+    ok: true,
+    free: true,
+    service: "dispatch",
+    note: "Illustrative routing decision from an unpaid probe. A paid call returns the same shape with the live service answer attached.",
+    example_request: { intent: "score this outreach email before I send it" },
+    example_response: {
+      ok: true,
+      matched_service: "power-pack",
+      endpoint: "POST https://power-pack-x402.fly.dev/api/score-email",
+      price: "$0.01",
+      network: "eip155:8453",
+      how_to_pay: "send the paid request WITHOUT payment, receive a 402 x402 challenge, sign a USDC transferWithAuthorization, re-send with PAYMENT-SIGNATURE",
+    },
+  }),
+);
+
+app.get("/pricing.md", (_req, res) =>
+  res
+    .type("text/markdown")
+    .send(
+      "# Pricing — Dispatch x402\n\n" +
+        "- Price: **$0.50 USDC per request**\n" +
+        "- Billing: pay per request; no account or subscription\n" +
+        "- Network: Base mainnet (eip155:8453)\n" +
+        "- Paid endpoint: `POST /dispatch` — body: `{ intent }`\n" +
+        "- Live payment requirements: [x402 manifest](https://dispatch-x402.fly.dev/.well-known/x402.json)\n" +
+        "- Free evaluation: [sample response](https://dispatch-x402.fly.dev/sample)\n\n" +
+        "The live x402 payment challenge is authoritative if the configured price changes.\n",
+    ),
+);
+
+app.get("/llms.txt", (_req, res) =>
+  res
+    .type("text/plain")
+    .send(
+      "# Dispatch x402\n\n" +
+        "> Aggregator meta-API for the Royal Agentic Enterprises fleet: one intent in, the right paid service out.\n\n" +
+        "- Paid endpoint: POST https://dispatch-x402.fly.dev/dispatch ($0.50 USDC)\n" +
+        "- Payment network: Base mainnet (eip155:8453), USDC via x402\n" +
+        "- Intended users: agents that need service selection without maintaining a catalog\n" +
+        "- x402 manifest: https://dispatch-x402.fly.dev/.well-known/x402.json\n" +
+        "- OpenAPI: https://dispatch-x402.fly.dev/openapi.json\n" +
+        "- Pricing: https://dispatch-x402.fly.dev/pricing.md\n" +
+        "- Free sample: https://dispatch-x402.fly.dev/sample\n" +
+        "- Health: https://dispatch-x402.fly.dev/health\n",
+    ),
+);
+
 app.use(paymentMiddleware(routesConfig, x402Server, undefined, undefined, false));
 
 // Ledger — append-only stdout line per paid dispatch (captured by fly logs).
