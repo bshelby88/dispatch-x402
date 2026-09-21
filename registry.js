@@ -160,6 +160,29 @@ const SERVICES = [
     intent: "Create a secure smart-contract escrow for agent-to-agent transactions.",
     params_hint: { buyer: "string", seller: "string", amount: "string" },
   },
+  {
+    id: "zfinia",
+    name: "zFinia — WCAG contrast validator + field-compat checker",
+    base: "https://zfinia-x402.fly.dev",
+    endpoints: [
+      { path: "/api/wcag-contrast", method: "POST", price: "$0.001", intent: "Validate WCAG 2.1 AA contrast ratios for color combinations." },
+      { path: "/api/field-compat", method: "POST", price: "$0.003", intent: "Check form field compatibility across browsers and assistive technologies." }
+    ],
+    network: NETWORK_MAINNET,
+    params_hint: { selector: "string (CSS selector or element)" },
+  },
+  {
+    id: "crypto-data",
+    name: "Crypto Data — on-chain market data feed",
+    base: "https://crypto-data-x402.fly.dev",
+    endpoints: [
+      { path: "/api/token-price", method: "POST", price: "$0.01", intent: "Get real-time token price for a given contract address." },
+      { path: "/api/token-balance", method: "POST", price: "$0.02", intent: "Get token balance for a wallet address." },
+      { path: "/api/tx-history", method: "POST", price: "$0.05", intent: "Get transaction history for a wallet address." }
+    ],
+    network: NETWORK_MAINNET,
+    params_hint: { address: "string (wallet or contract address)" },
+  },
 ];
 
 module.exports = { SERVICES, NETWORK_MAINNET };
