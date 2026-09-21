@@ -2,6 +2,8 @@
 // Each entry: stable id, live base URL, paid endpoint, price, network, intent
 // signature (the classifier routes on it), and param hints. Endpoints + prices
 // verified live against each service's /.well-known/x402.json + source 2026-06-29.
+// Updated 2026-09-21: added zFinia (WCAG contrast + field-compat) and external
+// crypto data API (7 endpoints).
 
 const NETWORK_MAINNET = "eip155:8453";
 
@@ -160,29 +162,116 @@ const SERVICES = [
     intent: "Create a secure smart-contract escrow for agent-to-agent transactions.",
     params_hint: { buyer: "string", seller: "string", amount: "string" },
   },
+  // zFinia — added 2026-09-21 (issue #5)
   {
-    id: "zfinia",
-    name: "zFinia — WCAG contrast validator + field-compat checker",
-    base: "https://zfinia-x402.fly.dev",
-    endpoints: [
-      { path: "/api/wcag-contrast", method: "POST", price: "$0.001", intent: "Validate WCAG 2.1 AA contrast ratios for color combinations." },
-      { path: "/api/field-compat", method: "POST", price: "$0.003", intent: "Check form field compatibility across browsers and assistive technologies." }
-    ],
+    id: "zfinia-contrast",
+    name: "zFinia — WCAG contrast calculator",
+    base: "https://api.zfinia.com",
+    endpoint: "/x402/v1/accessibility-contrast-calculator",
+    method: "POST",
+    price: "$0.001",
     network: NETWORK_MAINNET,
-    params_hint: { selector: "string (CSS selector or element)" },
+    intent: "Calculate WCAG 2.x sRGB contrast ratio / AA / AAA for any foreground/background color pair.",
+    params_hint: { fg: "string (#RRGGBB)", bg: "string (#RRGGBB)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
   },
   {
-    id: "crypto-data",
-    name: "Crypto Data — on-chain market data feed",
-    base: "https://crypto-data-x402.fly.dev",
-    endpoints: [
-      { path: "/api/token-price", method: "POST", price: "$0.01", intent: "Get real-time token price for a given contract address." },
-      { path: "/api/token-balance", method: "POST", price: "$0.02", intent: "Get token balance for a wallet address." },
-      { path: "/api/tx-history", method: "POST", price: "$0.05", intent: "Get transaction history for a wallet address." }
-    ],
+    id: "zfinia-compat",
+    name: "zFinia — Field contract compatibility checker",
+    base: "https://api.zfinia.com",
+    endpoint: "/x402/v1/data-compatibility-checker",
+    method: "POST",
+    price: "$0.003",
     network: NETWORK_MAINNET,
-    params_hint: { address: "string (wallet or contract address)" },
-  },
+    intent: "Check whether a data field contract (type, format, constraints) is compatible with a target schema.",
+    params_hint: { field: "string (field name)", target_schema: "string (JSON Schema URL or inline)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
+  },
+  // External Crypto Data API — added 2026-09-21 (issue #1)
+  {
+    id: "crypto-data-price",
+    name: "Crypto Data Feed — real-time prices",
+    base: "https://x402.167-172-95-184.nip.io",
+    endpoint: "/price",
+    method: "GET",
+    price: "$0.01",
+    network: NETWORK_MAINNET,
+    intent: "Get BTC and ETH real-time prices in USDC on Base.",
+    params_hint: { coin: "string (optional, defaults to both)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
+  },
+  {
+    id: "crypto-data-coin-price",
+    name: "Crypto Data Feed — single coin price",
+    base: "https://x402.167-172-95-184.nip.io",
+    endpoint: "/price/{coin}",
+    method: "GET",
+    price: "$0.02",
+    network: NETWORK_MAINNET,
+    intent: "Get real-time price for any cryptocurrency in USDC on Base.",
+    params_hint: { coin: "string (ticker symbol, e.g. SOL, AVAX)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
+  },
+  {
+    id: "crypto-data-portfolio",
+    name: "Crypto Data Feed — portfolio valuation",
+    base: "https://x402.167-172-95-184.nip.io",
+    endpoint: "/portfolio",
+    method: "GET",
+    price: "$0.05",
+    network: NETWORK_MAINNET,
+    intent: "Get total portfolio valuation with per-asset breakdown across tracked wallets.",
+    params_hint: { wallets: "string (comma-separated addresses)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
+  },
+  {
+    id: "crypto-data-opportunities",
+    name: "Crypto Data Feed — latest opportunities",
+    base: "https://x402.167-172-95-184.nip.io",
+    endpoint: "/opportunities/latest",
+    method: "GET",
+    price: "$0.03",
+    network: NETWORK_MAINNET,
+    intent: "Get the latest on-chain arbitrage and yield opportunities across Base DeFi protocols.",
+    params_hint: { protocol: "string (optional, filter by protocol)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
+  },
+  {
+    id: "crypto-data-morning",
+    name: "Crypto Data Feed — morning briefing",
+    base: "https://x402.167-172-95-184.nip.io",
+    endpoint: "/briefing/morning",
+    method: "GET",
+    price: "$0.01",
+    network: NETWORK_MAINNET,
+    intent: "Get a daily morning briefing with market summary, key levels, and notable on-chain events.",
+    params_hint: { date: "string (optional, ISO date)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
+  },
+  {
+    id: "crypto-data-research",
+    name: "Crypto Data Feed — research reports",
+    base: "https://x402.167-172-95-184.nip.io",
+    endpoint: "/research/{topic}",
+    method: "GET",
+    price: "$0.02",
+    network: NETWORK_MAINNET,
+    intent: "Get a research report on a specific crypto topic, protocol, or market narrative.",
+    params_hint: { topic: "string (research topic keyword)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
+  },
+  {
+    id: "crypto-data-mcp",
+    name: "Crypto Data Feed — MCP tool call",
+    base: "https://x402.167-172-95-184.nip.io",
+    endpoint: "/mcp/call",
+    method: "POST",
+    price: "$0.05",
+    network: NETWORK_MAINNET,
+    intent: "Invoke any MCP tool exposed by the crypto data feed — natural language queries for prices, portfolio, opportunities, research.",
+    params_hint: { tool: "string (tool name)", params: "object (tool-specific parameters)" },
+    facilitator: "https://x402-agent-pay.com/facilitator",
+  },
 ];
 
 module.exports = { SERVICES, NETWORK_MAINNET };
