@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node --test tests/payment-config.spec.cjs tests/workflow-security.spec.cjs tests/facilitator-emission.spec.cjs && node test_routing.cjs && node test_toon.js"
+    "test": "node --test tests/payment-config.spec.cjs tests/workflow-security.spec.cjs tests/facilitator-emission.spec.cjs && node test_routing.cjs && node test_toon.js && node test_agent_card.js"
   },
   "license": "ISC",
   "dependencies": {

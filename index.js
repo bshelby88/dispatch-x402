@@ -619,6 +619,114 @@ app.get("/llms.txt", (_req, res) =>
     ),
 );
 
+// ---------------------------------------------------------------------------
+// AGENSTRY-W1 cycle-7 replication (recO9y9mCEnExkp3W, 2026-09-28) — A2A v1.0
+// agent card + free JSON-RPC SendMessage surface for dispatch-x402.
+// Exact shape validated on rae-fleet-router / royal-gateway-x402 /
+// raen-portfolio-x402 / sentry-forge-x402 (Agenstry live_responds 25/25 pass
+// after c6b protocolBinding + c6c SendMessageResponse oneof wrapper; a2a-python
+// 1.1.5 end-to-end proof). Registered BEFORE the facilitator+payment gate, so
+// the discovery surfaces are free while POST /dispatch stays 402-gated.
+// Zero money paths touched: read-only guide text derived from existing
+// constants (DISPATCH_PRICE/NETWORK/PAY_TO/FACILITATOR_URL) — no new literals
+// that could drift; the live 402 challenge remains authoritative.
+// ---------------------------------------------------------------------------
+function dispatchCardUrl(req) {
+  // Production is TLS-only behind Fly; advertise https even on local http probes.
+  return `https://${req.get("host") || "dispatch-x402.fly.dev"}/a2a`;
+}
+function dispatchAgentCard(req) {
+  return {
+    name: "Dispatch — x402 Aggregator Meta-API (RAEN x402)",
+    description: `One natural-language intent in → the right paid fleet service out for ${DISPATCH_PRICE} USDC on ${NETWORK}: tiered confidence, params extracted from your intent, and a ready-to-use downstream call plan (URL, method, price, x402 terms) across the 15+ service RAEN catalog. Pay per call via x402 — no API keys, no subscription. Free surfaces: POST /classify (same routing, no charge), GET /sample, GET /api/services, GET /pricing.md, GET /llms.txt, GET /about, GET /openapi.json, GET /.well-known/x402.json.`,
+    version: "1.0.0",
+    protocolVersion: "1.0",
+    url: dispatchCardUrl(req),
+    supportedInterfaces: [{ url: dispatchCardUrl(req), transport: "JSONRPC", protocolBinding: "JSONRPC", protocolVersion: "1.0" }],
+    preferredTransport: "JSONRPC",
+    provider: { organization: "Royal Agentic Enterprises", url: "https://dispatch-x402.fly.dev" },
+    documentationUrl: "https://dispatch-x402.fly.dev/pricing.md",
+    capabilities: {
+      streaming: false,
+      pushNotifications: false,
+      stateTransitionHistory: false,
+      extensions: [
+        { uri: "https://x402.org", description: `x402 v2 payment gating: USDC on ${NETWORK}, scheme exact, ${DISPATCH_PRICE} per routing decision, facilitator ${FACILITATOR_URL}, payTo treasury ${PAY_TO}. The live 402 challenge is authoritative.`, required: false },
+      ],
+    },
+    defaultInputModes: ["application/json", "text/plain"],
+    defaultOutputModes: ["application/json", "text/plain"],
+    skills: [
+      {
+        id: "intent-routing-guide",
+        name: "Intent routing guide (paid dispatch)",
+        description: `Explains how to buy POST /dispatch (${DISPATCH_PRICE} USDC on ${NETWORK}): unpaid POST → decode the 402 PAYMENT-REQUIRED header → sign a USDC EIP-3009 transferWithAuthorization → resend with PAYMENT-SIGNATURE. Returns routed service, confidence tier, extracted params, and the downstream x402 call plan.`,
+        tags: ["routing", "dispatch", "meta-api", "catalog", "x402", "usdc"],
+        examples: ["I need to score a cold email — which fleet service and endpoint should I call?"],
+      },
+      {
+        id: "free-classify-preview",
+        name: "Free classification preview",
+        description: "Points to the free no-charge preview: POST /classify runs the same routing logic and reports tier/confidence/candidate route without payment; GET /sample shows the paid output shape; GET /api/services lists the full catalog with live prices.",
+        tags: ["classify", "free", "sample", "pricing", "catalog"],
+        examples: ["Can I preview routing confidence before paying?"],
+      },
+      {
+        id: "machine-readable-surfaces",
+        name: "Machine-readable discovery surfaces",
+        description: "Guides agents to this wall's free machine surfaces: /pricing.md (human+machine pricing), /llms.txt, /openapi.json, /about, /.well-known/x402.json (live 402 accepts), /.well-known/agent-card.json (this card), POST /a2a (A2A v1 JSON-RPC).",
+        tags: ["discovery", "openapi", "x402", "a2a", "json"],
+        examples: ["Where is the machine-readable pricing manifest for this service?"],
+      },
+    ],
+    securitySchemes: {},
+    security: [],
+  };
+}
+function a2aDispatchAnswer(lower) {
+  const base = `Dispatch (RAEN x402 aggregator meta-API): one natural-language intent in → the right paid fleet service out for ${DISPATCH_PRICE} USDC on ${NETWORK} (POST /dispatch). You get tiered confidence (auto/confirm/ambiguous), params extracted from your intent, and a ready-to-use downstream call plan (URL, method, price, x402 terms) across 15+ RAEN services. Buy flow: POST /dispatch unpaid → decode the 402 PAYMENT-REQUIRED header → sign a USDC EIP-3009 transferWithAuthorization → resend with PAYMENT-SIGNATURE; facilitator ${FACILITATOR_URL}; treasury ${PAY_TO}. Free before you pay: POST /classify (same routing, no charge), GET /sample, GET /api/services, GET /pricing.md, GET /.well-known/x402.json. The live 402 challenge is authoritative.`;
+  let extra = "";
+  if (/sample|preview|free|classify/.test(lower)) extra = "\n\nFree preview needs no payment at all: POST /classify runs the same routing logic (no charge) and GET /sample returns the exact paid output shape, so you can validate your pipeline before spending.";
+  else if (/route|dispatch|intent|which service|catalog|routing|service/.test(lower)) extra = "\n\nSend {\"intent\": \"...\"} to POST /dispatch for the authoritative routing decision and call plan; refine ambiguous intents first via the free POST /classify, and see GET /api/services for the full catalog with live prices.";
+  else if (/pay|price|usdc|x402|signature|eip/.test(lower)) extra = "\n\nPayment is per call, no account: the 402 challenge names the exact amount, network, payTo and facilitator — sign a USDC EIP-3009 transferWithAuthorization and resend with the PAYMENT-SIGNATURE header.";
+  return base + extra;
+}
+app.get(["/.well-known/agent-card.json", "/.well-known/agent.json"], (req, res) => {
+  res.set("Cache-Control", "public, max-age=60");
+  res.json(dispatchAgentCard(req));
+});
+app.post("/a2a", (req, res) => {
+  const b = req.body || {};
+  const id = b.id !== undefined ? b.id : null;
+  if (b.jsonrpc !== "2.0" || typeof b.method !== "string") {
+    return res.json({ jsonrpc: "2.0", id, error: { code: -32600, message: "Invalid Request: expected JSON-RPC 2.0 with a method string" } });
+  }
+  if (b.method === "SendMessage" || b.method === "message/send" || b.method === "tasks/send") {
+    // Wire-format negotiation by the method the caller used (validated on the
+    // four A2A surfaces this workstream): A2A v1.0 SendMessage is protojson —
+    // result is the SendMessageResponse oneof wrapper {message:{...}} with
+    // role ROLE_AGENT and bare oneof parts ({"text":...}, no "kind"). v0.3
+    // message/send/tasks/send keeps the flat kinded Message. Inbound parts
+    // are accepted in BOTH shapes.
+    const v1 = b.method === "SendMessage";
+    const userText = (((b.params || {}).message || {}).parts || [])
+      .filter((p) => p && typeof p.text === "string")
+      .map((p) => p.text).join(" ").slice(0, 500);
+    const answer = a2aDispatchAnswer(userText.toLowerCase());
+    const metadata = { free: true, x402: { network: NETWORK, price: DISPATCH_PRICE, payTo: PAY_TO, facilitator: FACILITATOR_URL, manifest: "/.well-known/x402.json" } };
+    const messageId = `d-${Date.now()}`;
+    const message = { messageId, role: "ROLE_AGENT", parts: [{ text: answer }], metadata };
+    const result = v1
+      ? { message }
+      : { kind: "message", role: "agent", messageId, parts: [{ kind: "text", text: answer }], metadata };
+    return res.json({ jsonrpc: "2.0", id, result });
+  }
+  if (b.method === "GetAgentCard") {
+    return res.json({ jsonrpc: "2.0", id, result: dispatchAgentCard(req) });
+  }
+  return res.json({ jsonrpc: "2.0", id, error: { code: -32601, message: "Method not found: supported are SendMessage (v1), message/send (v0.3), GetAgentCard" } });
+});
+
 app.use(paymentMiddleware(routesConfig, x402Server, undefined, undefined, false));
 
 // Ledger — append-only stdout line per paid dispatch (captured by fly logs).
