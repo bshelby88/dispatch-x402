@@ -196,7 +196,7 @@ if (process.env.CDP_API_KEY_SECRET_B64) {
 }
 
 const HAS_CDP = Boolean(process.env.CDP_API_KEY_ID && process.env.CDP_API_KEY_SECRET);
-const NETWORK = HAS_CDP ? "eip155:8453" : "eip155:84532";
+const NETWORK = process.env.X402_NETWORK || (HAS_CDP ? "eip155:8453" : "eip155:84532");
 
 let facilitatorClient;
 if (HAS_CDP) {
@@ -204,7 +204,7 @@ if (HAS_CDP) {
   facilitatorClient = new HTTPFacilitatorClient(facilitator);
   console.log("→ Coinbase CDP facilitator (mainnet)");
 } else {
-  facilitatorClient = new HTTPFacilitatorClient({ url: "https://x402.org/facilitator" });
+  facilitatorClient = new HTTPFacilitatorClient({ url: process.env.X402_FACILITATOR_URL || "https://x402.org/facilitator" });
   console.log("→ public x402.org facilitator (Sepolia testnet)");
 }
 
