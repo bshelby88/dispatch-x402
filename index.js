@@ -559,6 +559,7 @@ app.get("/.well-known/x402.json", (_req, res) =>
         accepts: dispatchRoute.accepts,
         description: dispatchRoute.description,
         mimeType: "application/json",
+        extensions: dispatchRoute.extensions,
       },
     },
   })
