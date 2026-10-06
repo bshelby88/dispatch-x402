@@ -6,7 +6,7 @@ const EVM_ADDRESS = /^0x[a-fA-F0-9]{40}$/;
 // Lingua-hardening pattern (POWER-PACK-BUY-1 / ROYALRUBY-BUY-1, 2026-09-15):
 // a valid-but-wrong X402_PAY_TO silently misroutes every sale, so production
 // boot now fails closed unless the recipient IS the canonical treasury.
-const CANONICAL_TREASURY = "0x7861DB4EfC14A1ed5dd8C96c528A3796560F1393";
+const CANONICAL_TREASURY = "0xfbc0eb7811d477e55261d956df39f0046e192240";
 
 function resolveProductionRecipient(env = process.env) {
   const recipient = env.X402_PAY_TO;

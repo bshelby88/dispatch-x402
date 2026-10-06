@@ -15,7 +15,7 @@ const { spawn } = require("node:child_process");
 const net = require("node:net");
 const path = require("node:path");
 
-const CANONICAL_TREASURY = "0x7861DB4EfC14A1ed5dd8C96c528A3796560F1393";
+const CANONICAL_TREASURY = "0xfbc0eb7811d477e55261d956df39f0046e192240";
 
 function freePort() {
   return new Promise((resolve, reject) => {
