@@ -14,7 +14,7 @@ const path = require("node:path");
 const test = require("node:test");
 
 const root = path.join(__dirname, "..");
-const CANONICAL = "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
+const CANONICAL = "0xfBC0eb7811D477E55261d956dF39f0046E192240";
 const FACILITATOR = "https://x402-agent-pay.com/facilitator";
 const PORT = 19877;
 
