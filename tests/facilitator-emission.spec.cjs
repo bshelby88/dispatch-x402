@@ -15,7 +15,7 @@ const test = require("node:test");
 
 const root = path.join(__dirname, "..");
 const CANONICAL = "0xfBC0eb7811D477E55261d956dF39f0046E192240";
-const FACILITATOR = "https://facilitator-x402.fly.dev";
+const FACILITATOR = "https://raen-facilitator.fly.dev";
 const PORT = 19877;
 
 function request(method, pathname, body, headers = {}) {

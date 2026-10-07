@@ -173,7 +173,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Calculate WCAG 2.x sRGB contrast ratio / AA / AAA for any foreground/background color pair.",
     params_hint: { fg: "string (#RRGGBB)", bg: "string (#RRGGBB)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
   {
     id: "zfinia-compat",
@@ -185,7 +185,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Check whether a data field contract (type, format, constraints) is compatible with a target schema.",
     params_hint: { field: "string (field name)", target_schema: "string (JSON Schema URL or inline)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
   // External Crypto Data API — added 2026-09-21 (issue #1)
   {
@@ -198,7 +198,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Get BTC and ETH real-time prices in USDC on Base.",
     params_hint: { coin: "string (optional, defaults to both)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
   {
     id: "crypto-data-coin-price",
@@ -210,7 +210,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Get real-time price for any cryptocurrency in USDC on Base.",
     params_hint: { coin: "string (ticker symbol, e.g. SOL, AVAX)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
   {
     id: "crypto-data-portfolio",
@@ -222,7 +222,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Get total portfolio valuation with per-asset breakdown across tracked wallets.",
     params_hint: { wallets: "string (comma-separated addresses)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
   {
     id: "crypto-data-opportunities",
@@ -234,7 +234,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Get the latest on-chain arbitrage and yield opportunities across Base DeFi protocols.",
     params_hint: { protocol: "string (optional, filter by protocol)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
   {
     id: "crypto-data-morning",
@@ -246,7 +246,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Get a daily morning briefing with market summary, key levels, and notable on-chain events.",
     params_hint: { date: "string (optional, ISO date)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
   {
     id: "crypto-data-research",
@@ -258,7 +258,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Get a research report on a specific crypto topic, protocol, or market narrative.",
     params_hint: { topic: "string (research topic keyword)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
   {
     id: "crypto-data-mcp",
@@ -270,7 +270,7 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Invoke any MCP tool exposed by the crypto data feed — natural language queries for prices, portfolio, opportunities, research.",
     params_hint: { tool: "string (tool name)", params: "object (tool-specific parameters)" },
-    facilitator: "https://facilitator-x402.fly.dev",
+    facilitator: "https://raen-facilitator.fly.dev",
   },
 ];
 
