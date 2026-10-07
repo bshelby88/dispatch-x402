@@ -25,7 +25,7 @@ test("rejects a missing production recipient", () => {
 });
 
 test("accepts an explicitly configured EVM recipient without guessing", () => {
-  const recipient = "0xfbc0eb7811d477e55261d956df39f0046e192240";
+  const recipient = "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
   assert.equal(resolveProductionRecipient({ X402_PAY_TO: recipient }), recipient);
 });
 

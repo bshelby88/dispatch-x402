@@ -14,8 +14,8 @@ const path = require("node:path");
 const test = require("node:test");
 
 const root = path.join(__dirname, "..");
-const CANONICAL = "0xfBC0eb7811D477E55261d956dF39f0046E192240";
-const FACILITATOR = "https://raen-facilitator.fly.dev";
+const CANONICAL = "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
+const FACILITATOR = "https://raen-facilitator.fly.dev/facilitator";
 const PORT = 19877;
 
 function request(method, pathname, body, headers = {}) {
@@ -52,7 +52,7 @@ test("POST /dispatch 402 challenge carries facilitator + serviceName + canonical
     env: {
       ...process.env,
       PORT: String(PORT),
-      X402_PAY_TO: "0xfbc0eb7811d477e55261d956df39f0046e192240",
+      X402_PAY_TO: "0x7861db4efc14a1ed5dd8c96c528a3796560f1393",
       CDP_API_KEY_ID: "",
       CDP_API_KEY_SECRET: "",
     },

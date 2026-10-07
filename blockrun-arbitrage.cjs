@@ -16,7 +16,7 @@ function ensureAgentCashWallet() {
     console.log("[Arbitrage] Initializing agentcash wallet inside container...");
     try {
       fs.mkdirSync(agentCashDir, { recursive: true });
-      const address = process.env.SENDER_ADDRESS || "0xfBC0eb7811D477E55261d956dF39f0046E192240";
+      const address = process.env.SENDER_ADDRESS || "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
       const walletConfig = {
         address,
         privateKey: pk.startsWith("0x") ? pk : `0x${pk}`,
