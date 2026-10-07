@@ -23,7 +23,7 @@ const DISPATCH_PRICE = process.env.DISPATCH_PRICE || "$0.50";
 // 2026-09-15: walls that omit `facilitator`/`serviceName` were reported
 // unbuyable by AgentPay mppscan.
 const SERVICE_NAME = "dispatch";
-const FACILITATOR_URL = "https://x402-agent-pay.com/facilitator";
+const FACILITATOR_URL = "https://facilitator-x402.fly.dev";
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
 const CLASSIFY_MODEL = process.env.CLASSIFY_MODEL || "claude-haiku-4-5-20251001";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
