@@ -5,7 +5,7 @@ primary_region = "dfw"
   dockerfile = "Dockerfile"
 
 [env]
-  X402_PAY_TO = "0x7861db4efc14a1ed5dd8c96c528a3796560f1393"
+  X402_PAY_TO = "0xfbc0eb7811d477e55261d956df39f0046e192240"
   PORT = "3000"
   DISPATCH_PRICE = "$0.50"
 
