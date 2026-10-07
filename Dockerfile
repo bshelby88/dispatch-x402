@@ -1,4 +1,5 @@
 FROM node:22-slim
+ARG CACHEBUST=0
 
 WORKDIR /app
 
