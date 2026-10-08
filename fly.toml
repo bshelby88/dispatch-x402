@@ -1,37 +1,42 @@
-app = "dispatch-x402"
-primary_region = "dfw"
+# fly.toml app configuration file generated for dispatch-x402-7q2mqg on 2026-10-08T06:43:26Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'dispatch-x402-7q2mqg'
+primary_region = 'dfw'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  X402_PAY_TO = "0x7861db4efc14a1ed5dd8c96c528a3796560f1393"
-  PORT = "3000"
-  DISPATCH_PRICE = "$0.50"
+  DISPATCH_PRICE = '$0.50'
+  PORT = '3000'
+  X402_PAY_TO = '0x7861db4efc14a1ed5dd8c96c528a3796560f1393'
 
 [http_service]
-  internal_port = 3000
+  internal_port = 8080
   force_https = true
-  # Always-warm: a paid settlement endpoint must not race async facilitator init
-  # on cold start, and downstream callers expect low latency (council Month-1).
-  auto_stop_machines = "off"
+  auto_stop_machines = 'off'
   auto_start_machines = true
   min_machines_running = 1
-  processes = ["app"]
+  processes = ['app']
 
   [http_service.concurrency]
-    type = "requests"
-    soft_limit = 50
+    type = 'requests'
     hard_limit = 100
+    soft_limit = 50
 
   [[http_service.checks]]
-    interval = "30s"
-    timeout = "5s"
-    grace_period = "15s"
-    method = "GET"
-    path = "/health"
+    interval = '30s'
+    timeout = '5s'
+    grace_period = '15s'
+    method = 'GET'
+    path = '/health'
 
 [[vm]]
-  size = "shared-cpu-1x"
-  memory = "512mb"
+  size = 'shared-cpu-1x'
+  memory = '512mb'
+  cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
