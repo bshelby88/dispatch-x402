@@ -1,4 +1,4 @@
-app = "x402-core"
+app = "dispatch-x402"
 primary_region = "iad"
 
 [http_service]
