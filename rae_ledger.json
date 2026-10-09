@@ -3611,7 +3611,93 @@
         }
       ],
       "signature": "c941ea7b0cdb1a65bd96b299d0549545bcb69f0453421c6f95552d85f9b6a00f"
+    },
+    {
+      "epoch": 1791519277116,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791519277116,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791519277116,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791519277116,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791519277116
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791519277116,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791519277116,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791519277116,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "getaddrinfo ENOTFOUND power-pack-x402.fly.dev",
+          "timestamp": 1791519277116
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791519277116,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791519277116,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "51ad76cc2a86d52a9e8ea55d9ce1de394ab02df1a55c3ef8b95864c365e6b478"
     }
   ],
-  "last_verification": 1791424207848
+  "last_verification": 1791519289377
 }
