@@ -1,36 +1,14 @@
-app = "dispatch-x402"
-primary_region = "dfw"
-
-[build]
-  dockerfile = "Dockerfile"
-
-[env]
-  PORT = "3000"
-  DISPATCH_PRICE = "$0.50"
+app = "x402-core"
+primary_region = "iad"
 
 [http_service]
   internal_port = 3000
   force_https = true
-  # Always-warm: a paid settlement endpoint must not race async facilitator init
-  # on cold start, and downstream callers expect low latency (council Month-1).
-  auto_stop_machines = "off"
+  auto_stop_machines = false
   auto_start_machines = true
-  min_machines_running = 1
-  processes = ["app"]
-
-  [http_service.concurrency]
-    type = "requests"
-    soft_limit = 50
-    hard_limit = 100
-
-  [[http_service.checks]]
-    interval = "30s"
-    timeout = "5s"
-    grace_period = "15s"
-    method = "GET"
-    path = "/health"
+  min_machines_running = 2
 
 [[vm]]
-  size = "shared-cpu-1x"
-  memory = "512mb"
+  memory = "1gb"
+  cpu_kind = "shared"
   cpus = 1

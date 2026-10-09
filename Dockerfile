@@ -1,13 +1,8 @@
-FROM node:22-slim
-
+FROM node:20-slim
 WORKDIR /app
-
-COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
-
-COPY index.js registry.js toon_middleware.js payment-config.cjs blockrun-arbitrage.cjs x402-verifier.cjs watchdog-attestation.cjs ./
-
-ENV PORT=3000
+COPY package.json consolidated-app.cjs ./
+COPY handlers ./handlers
+COPY registry.js ./
+RUN npm install --production
 EXPOSE 3000
-
-CMD ["node", "index.js"]
+CMD ["node", "consolidated-app.cjs"]

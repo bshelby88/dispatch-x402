@@ -1,4 +1,6 @@
-// Fleet service registry — the routing target set for the dispatch meta-API.
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0// Fleet service registry — the routing target set for the dispatch meta-API.
 // Each entry: stable id, live base URL, paid endpoint, price, network, intent
 // signature (the classifier routes on it), and param hints. Endpoints + prices
 // verified live against each service's /.well-known/x402.json + source 2026-06-29.
@@ -210,7 +212,8 @@ const SERVICES = [
     network: NETWORK_MAINNET,
     intent: "Get real-time price for any cryptocurrency in USDC on Base.",
     params_hint: { coin: "string (ticker symbol, e.g. SOL, AVAX)" },
-    facilitator: "https://x402-agent-pay.com/facilitator",
+    facilitat100  10700 100  10700   0      0  33160      0                              0100  10700 100  10700   0      0  33110      0                              0100  10700 100  10700   0      0  33062      0                              0
+or: "https://x402-agent-pay.com/facilitator",
   },
   {
     id: "crypto-data-portfolio",
@@ -274,4 +277,4 @@ const SERVICES = [
   },
 ];
 
-export { SERVICES, NETWORK_MAINNET };
+module.exports = { SERVICES, NETWORK_MAINNET };

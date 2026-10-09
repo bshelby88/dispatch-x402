@@ -80,4 +80,4 @@ function toonMiddleware(req, res, next) {
   next();
 }
 
-module.exports = { toonMiddleware, convertToToon };
+export { toonMiddleware, convertToToon };

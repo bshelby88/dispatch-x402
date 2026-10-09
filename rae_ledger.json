@@ -1,0 +1,3617 @@
+{
+  "attestations": [
+    {
+      "epoch": 1791350406435,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791350406435
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791350406435,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "32cd475ac4d2591e47d1916e77053373d46be759c1e452893df70015f6e6fe1d"
+    },
+    {
+      "epoch": 1791352206438,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791352206438
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791352206438,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "203828e905c91f5be05e9f8933d2f658a5cea95c27c4fed0f3dd294dc7e716b3"
+    },
+    {
+      "epoch": 1791354006450,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791354006450
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791354006450,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "44d458b02b312d61d84d6c22837dced818fe2559bbbffdbb1b19d7d3f9e982c1"
+    },
+    {
+      "epoch": 1791355806461,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791355806461
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791355806461,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "c13f1c944b586b617f33bbb96d1e7a2629733fe31dca97959eedb21373a16b8e"
+    },
+    {
+      "epoch": 1791357606462,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791357606462
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791357606462,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "65c4265fabb361fa25a9d82e7bd7da08a5468e22e0cc7f9dfe38de6780ba8f51"
+    },
+    {
+      "epoch": 1791359406468,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791359406468
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791359406468,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "261f2b3c260c10fb5ea1ac4d8b1888709cc809c654e7c041bf5a68fb2e2fd49e"
+    },
+    {
+      "epoch": 1791361206483,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791361206483
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791361206483,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "c66c4ab3c133b3589dd7648aa52309f9630870987066f872e400df84937e2a7f"
+    },
+    {
+      "epoch": 1791363006491,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791363006491
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791363006491,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "99a328b8ad0e1315d5cad9f0ba1e4713157f94795fd48c10c297de32aaee156d"
+    },
+    {
+      "epoch": 1791364806504,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791364806504
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791364806504,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "414568a716652be8590bc039044a33ded9166afbfc1e4e7d4526608410e9fb3f"
+    },
+    {
+      "epoch": 1791366606517,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791366606517
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791366606517,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "86350f137e1de4f3f2325d61bb3539d27b1f272a81f49d85498161ee3cc345a7"
+    },
+    {
+      "epoch": 1791368406528,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791368406528
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791368406528,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "92c2d45422857284169e58500d3c948a0b9045f8391f66ab00a84331b28596a9"
+    },
+    {
+      "epoch": 1791370206543,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791370206543
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791370206543,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "b0100b8077199737e17c91ab42096c0654c129e6270f34e4943e8873c4b44735"
+    },
+    {
+      "epoch": 1791372006556,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791372006556
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791372006556,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "24ead8675ee9c3c3763259ec5539375a1105eded3f11f2ef08289cd93b76a7d2"
+    },
+    {
+      "epoch": 1791373806567,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791373806567
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791373806567,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "200e8de342a0a4efbcd93b89048a6d54bb573d1313259ec81ba0033254b63ae6"
+    },
+    {
+      "epoch": 1791375606581,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 0,
+          "ok": false,
+          "error": "Timeout",
+          "timestamp": 1791375606581
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 503,
+          "ok": false,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791375606581,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "4c8c9033a28695a0d1d101c327bcabae11625ed0fc4b6631d40edbccfb099045"
+    },
+    {
+      "epoch": 1791377406582,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791377406582,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "ea5e0423a1c4b305db9eecf84b59f646ca536712077182b07c123f65f616d3bb"
+    },
+    {
+      "epoch": 1791379206595,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791379206595,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "336011fbb277d3974c16ed26f57479b8035d0608d6bd689756988489b1ac8fa6"
+    },
+    {
+      "epoch": 1791381006602,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791381006602,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "a6035b4a44cde2beb7a6e11935f58b5f8e6e4c4ce22d41e945a53464cddb7177"
+    },
+    {
+      "epoch": 1791382806615,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791382806615,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "6b0c7ba48555dfcf1b150865d37dc730063ccdec5699cbdca9ced66f40ee636e"
+    },
+    {
+      "epoch": 1791384606616,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791384606616,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "d9d301bdc14a0f4a340d2dbdd5863323fd6551bfd29c1aadb8c6d30eceb42849"
+    },
+    {
+      "epoch": 1791386406620,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791386406620,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "fd3464cc92fb9ef977b16fe115a15360a8981b892aacdc3a55218ed28d024e36"
+    },
+    {
+      "epoch": 1791388206623,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791388206623,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "e99ec9a54e747cdff0d639c14dc97d735ab79351adc35251ca890e070c2388a3"
+    },
+    {
+      "epoch": 1791390006634,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791390006634,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "deafd8e6246e2f5b8db6abb52aaeb86c5ea0b529218d85e1f9748a942b167e89"
+    },
+    {
+      "epoch": 1791391806645,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791391806645,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "5cfa423a27fcf88415fa186c44644e2c07cb96e53bc70a762e1a7472110ff214"
+    },
+    {
+      "epoch": 1791393606656,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791393606656,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "810f96e5a4536fefd1106a1f84e0e4873a6085da26f01c7ec3372f3d71497f1e"
+    },
+    {
+      "epoch": 1791395406666,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791395406666,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "b28bd33dc82533b6e9beb19c6b3549404c85a724726e62954da5b8a628d6f631"
+    },
+    {
+      "epoch": 1791397206672,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791397206672,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "c26144f35ff87cbfb4aebf4db505136669f18e336503b20cb1ddcd69fc6816ef"
+    },
+    {
+      "epoch": 1791399006679,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791399006679,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "cb10817aa5581cb53c87d3f8e29a1e8dd0fbe45a5e31ae17e51b0d42594e15b9"
+    },
+    {
+      "epoch": 1791400806682,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791400806682,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "be5ba83411943a542dfb8f7e1ffacba987b5a66e806150de024f21e65febc23f"
+    },
+    {
+      "epoch": 1791402606697,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791402606697,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "e1501a628595139b1eef20861f9f671194c527dd6d32031793221e3ed391a672"
+    },
+    {
+      "epoch": 1791404406700,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791404406700,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "4574f3d3f5afc5ecc0c0ddbd6c6dab1cd45bd7f167fe2dc5b5060c4ffeecd28f"
+    },
+    {
+      "epoch": 1791406206712,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791406206712,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "c61acd1c7bb274011697e5f45b118cd8c4a405e17fa6e4ae237d0836f4a46ad4"
+    },
+    {
+      "epoch": 1791408006726,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791408006726,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "82719fd43e06182cde552cdc44720e194be538165a1c862ace86067c88209b35"
+    },
+    {
+      "epoch": 1791409806729,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791409806729,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "81d996077261302c18f9200511b7600bd5da91c42b55baaa1c185703af0eb74d"
+    },
+    {
+      "epoch": 1791411606730,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791411606730,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "3e067c96dedb1b8bb23839ba83a06a6ac026ed4e70e384359702c42c906ce2a4"
+    },
+    {
+      "epoch": 1791413406737,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791413406737,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "4e14e41a176bd75080a03cca3d5bfcfc2041c772390814be62b597af16f3daa0"
+    },
+    {
+      "epoch": 1791415206743,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791415206743,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "8b46cc53ec9e7a4528ec5d0eaf62f39f74efb24dec239cb9d42515eb2e445fcd"
+    },
+    {
+      "epoch": 1791417006747,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791417006747,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "3673919fe46b0c0f532f402f9b714cb6b0b8edf66649bbb6dc9393abe714c7dd"
+    },
+    {
+      "epoch": 1791418806748,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791418806748,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "17059c277f149e413374223c544ef1da1c4ec25c47c20dbf45faeb38700fde72"
+    },
+    {
+      "epoch": 1791420606762,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791420606762,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "6ef735af6cc768085af197ce3b5543b7e896973485e49e2c4e187b3c36f72ae2"
+    },
+    {
+      "epoch": 1791422406763,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791422406763,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "45d663a8762789633b456bb28689e1e2004cefbc70310cf1ab1850b2a8d8fc68"
+    },
+    {
+      "epoch": 1791424206770,
+      "results": [
+        {
+          "service": "staci-core",
+          "url": "https://staci-core.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispatch-x402",
+          "url": "https://dispatch-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "tradingagents-x402",
+          "url": "https://tradingagents-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "vault-pro-x402",
+          "url": "https://vault-pro-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "suprapack-x402",
+          "url": "https://suprapack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "royal-ruby-x402",
+          "url": "https://royal-ruby-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "nanobanana-x402",
+          "url": "https://nanobanana-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "power-pack-x402",
+          "url": "https://power-pack-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "sentry-forge-x402",
+          "url": "https://sentry-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        },
+        {
+          "service": "dispute-forge-x402",
+          "url": "https://dispute-forge-x402.fly.dev/health",
+          "status": 200,
+          "ok": true,
+          "timestamp": 1791424206770,
+          "latency_ms": 0
+        }
+      ],
+      "signature": "c941ea7b0cdb1a65bd96b299d0549545bcb69f0453421c6f95552d85f9b6a00f"
+    }
+  ],
+  "last_verification": 1791424207848
+}

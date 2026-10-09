@@ -1,0 +1,52 @@
+# Dispatch x402 — x402 Aggregator Meta-API
+
+> One paid endpoint that routes an agent's natural-language intent to the correct paid service in the Royal Agentic x402 fleet. Routing itself is the priced primitive. Live on Base mainnet.
+
+## Endpoints
+
+| Endpoint | Cost | Purpose |
+|----------|------|---------|
+| `GET /health` | free | Liveness |
+| `GET /about` | free | Service info, pricing, registry |
+| `GET /api/services` | free | List routable fleet services |
+| `POST /classify` | free | Preview: chosen service + confidence + extracted params. No charge for ambiguous routes. |
+| `POST /dispatch` | $0.50 USDC | Authoritative route + params + downstream call instructions |
+| `GET /.well-known/x402.json` | free | x402 Bazaar discovery manifest |
+
+## Protocol
+
+All paid requests use x402 payment on Base mainnet (eip155:8453).
+Facilitator: https://x402-agent-pay.com/facilitator
+
+## Confidence Gate
+
+- `≥0.88` — auto-execute-safe
+- `≥0.65` — confirm with user
+- `<0.65` — ambiguous (use free `/classify`)
+
+## Examples
+
+### Classification (free)
+```bash
+curl -X POST https://dispatch-x402.fly.dev/classify \
+  -H "Content-Type: application/json" \
+  -d '{"intent": "score this cold email", "params": {}}'
+```
+
+### Dispatch ($0.50)
+```bash
+curl -X POST https://dispatch-x402.fly.dev/dispatch \
+  -H "Content-Type: application/json" \
+  -d '{"intent": "score this cold email", "params": {}}'
+```
+
+## OpenSea Agent Discovery
+
+This service integrates with the OpenSea ecosystem. AI agents can discover and interact with OpenSea via:
+
+- **OpenSea llms.txt:** `GET https://opensea.io/llms.txt` — plain-text API overview for LLM context windows
+- **OpenAPI Spec:** `GET https://api.opensea.io/api/v2/openapi.json` — full machine-readable endpoint descriptions
+- **TOON Encoding:** Send `Accept: text/markdown` header to receive Token-Optimized Object Notation (~40% fewer tokens than JSON)
+- **Instant API Key:** `POST https://api.opensea.io/api/v2/auth/keys` — free-tier key, no signup (600 read/h, 30 write/h, 7-day expiry)
+- **OpenSea CLI:** `npx @opensea/cli`
+- **OpenSea MCP:** `https://mcp.opensea.io/mcp`
