@@ -86,5 +86,5 @@ jobs:
           only-severities: critical,high
           exit-code: true
           summary: true
-          registry-user: ${{ env.DOCKER_USER }}
-          registry-password: ${{ secrets.DOCKER_PAT }}
+          dockerhub-user: ${{ env.DOCKER_USER }}
+          dockerhub-password: ${{ secrets.DOCKER_PAT }}
