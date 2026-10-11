@@ -18,3 +18,21 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
+      # Boot smoke (blocking): prove the app actually boots and serves /health.
+      # Guards the runtime-dep-drift class of bug (e.g. express pruned by a
+      # stale lockfile) that unit tests cannot catch because nothing boots.
+      - name: Boot smoke — node index.js must boot and serve /health
+        run: |
+          X402_PAY_TO=0x7861db4efc14a1ed5dd8c96c528a3796560f1393 PORT=3000 node index.js > /tmp/boot-smoke.log 2>&1 &
+          PID=$!
+          trap 'kill $PID 2>/dev/null || true' EXIT
+          for i in $(seq 1 15); do
+            CODE=$(curl -s -o /dev/null -w '%{http_code}' -m 5 http://localhost:3000/health || true)
+            echo "boot-smoke attempt $i: HTTP ${CODE:-no-response}"
+            if [ "$CODE" = "200" ]; then echo "::notice::boot smoke OK (HTTP 200)"; exit 0; fi
+            sleep 2
+          done
+          echo "---- boot log (tail) ----"
+          tail -40 /tmp/boot-smoke.log 2>&1 || true
+          echo "::error::boot smoke FAILED — /health did not return 200 within 30s"
+          exit 1
