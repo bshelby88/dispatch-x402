@@ -524,9 +524,7 @@ const dispatchRoute = {
   accepts: { scheme: "exact", price: DISPATCH_PRICE, network: NETWORK, payTo: PAY_TO, extra: { facilitator: FACILITATOR_URL } },
   serviceName: SERVICE_NAME,
   description:
-    "Route a natural-language agent intent to the correct paid fleet service. Returns the chosen " +
-    "service, a calibrated confidence score, params extracted from the intent, and ready-to-use call " +
-    "instructions (URL, method, price, x402 terms). Use the free /classify first to preview confidence.",
+    "Route a natural-language agent intent to the right paid fleet service. POST your intent, receive the chosen service, confidence score, extracted params, and a ready-to-use request as JSON. $0.50 per call, Base USDC x402.",
   mimeType: "application/json",
   extensions: {
     ...declareDiscoveryExtension({
