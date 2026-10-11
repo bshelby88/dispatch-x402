@@ -581,7 +581,7 @@ const serviceInfo = {
   name: "dispatch",
   title: "Dispatch — x402 Aggregator Meta-API",
   description:
-    "Paid routing layer for the agent-commerce fleet. One intent in, the right paid service out.",
+    "Route a natural-language agent intent to the right paid fleet service. POST your intent, receive the chosen service, confidence score, extracted params, and a ready-to-use request as JSON. $0.50 per call, Base USDC x402.",
   contact: "jadedfocus@gmail.com",
   operator: "Royal Agentic Enterprises",
 };
