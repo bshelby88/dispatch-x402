@@ -18,7 +18,7 @@ const suprapackHandler = require("./handlers/suprapack.js");
 const vaultProHandler = require("./handlers/vault-pro.js");
 
 const PAY_TO = process.env.X402_PAY_TO || "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
-const FACILITATOR_URL = "https://x402-agent-pay.com/facilitator";
+const FACILITATOR_URL = "https://raen-facilitator.fly.dev/facilitator";
 const NETWORK = process.env.X402_NETWORK || "eip155:8453";
 
 const CANONICAL_PAY_TO = "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
