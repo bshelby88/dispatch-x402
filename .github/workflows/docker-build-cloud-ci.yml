@@ -87,7 +87,7 @@ jobs:
           docker pull "$IMG" || { echo "::warning::boot smoke: image pull failed"; exit 0; }
           docker run --rm -d -p 3000:3000 \
             -e PORT=3000 \
-            -e X402_PAY_TO=0x7861db4efc14a1ed5dd8c96c528a3796560f1393 \
+            -e X402_PAY_TO=0x9b8a27e03ceba490953cda8ab1291c0e13baf72f \
             --name boot-smoke "$IMG"
           trap 'docker rm -f boot-smoke >/dev/null 2>&1 || true' EXIT
           for i in $(seq 1 15); do

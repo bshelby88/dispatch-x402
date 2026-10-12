@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 
-const PAY_TO = process.env.X402_PAY_TO || "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
+const PAY_TO = process.env.X402_PAY_TO || "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f";
 const FACILITATOR_URL = "https://x402-agent-pay.com/facilitator";
 const NETWORK = process.env.X402_NETWORK || "eip155:8453";
 const PRICE = process.env.SUPRA_PRICE || "$0.03";

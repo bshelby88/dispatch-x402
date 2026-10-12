@@ -23,7 +23,7 @@ jobs:
       # stale lockfile) that unit tests cannot catch because nothing boots.
       - name: Boot smoke — node index.js must boot and serve /health
         run: |
-          X402_PAY_TO=0x7861db4efc14a1ed5dd8c96c528a3796560f1393 PORT=3000 node index.js > /tmp/boot-smoke.log 2>&1 &
+          X402_PAY_TO=0x9b8a27e03ceba490953cda8ab1291c0e13baf72f PORT=3000 node index.js > /tmp/boot-smoke.log 2>&1 &
           PID=$!
           trap 'kill $PID 2>/dev/null || true' EXIT
           for i in $(seq 1 15); do

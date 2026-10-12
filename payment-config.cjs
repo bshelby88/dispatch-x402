@@ -9,7 +9,7 @@ const EVM_ADDRESS = /^0x[a-fA-F0-9]{40}$/;
 // 2026-10-07 CORRECTION: this constant held the PAYER address, not the treasury —
 // so the "fail closed" rule actually forced every sale to the payer wallet and
 // rejected the treasury. Canonical recipient is 0x7861db4e…1393.
-const CANONICAL_TREASURY = "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
+const CANONICAL_TREASURY = "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f";
 
 function resolveProductionRecipient(env = process.env) {
   const recipient = env.X402_PAY_TO;
