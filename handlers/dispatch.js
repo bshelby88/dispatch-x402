@@ -5,7 +5,7 @@ const { generateText } = require("ai");
 const { createAnthropic } = require("@ai-sdk/anthropic");
 const { createGoogle } = require("@ai-sdk/google");
 
-const PAY_TO = process.env.X402_PAY_TO || "0x7861db4efc14a1ed5dd8c96c528a3796560f1393";
+const PAY_TO = process.env.X402_PAY_TO || "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f";
 const DISPATCH_PRICE = process.env.DISPATCH_PRICE || "$0.50";
 const FACILITATOR_URL = "https://x402-agent-pay.com/facilitator";
 const NETWORK = NETWORK_MAINNET || "eip155:8453";
