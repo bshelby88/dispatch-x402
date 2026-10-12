@@ -16,6 +16,7 @@ const { x402ResourceServer, HTTPFacilitatorClient } = require("@x402/core/server
 const { ExactEvmScheme } = require("@x402/evm/exact/server");
 const { declareDiscoveryExtension } = require("@x402/extensions/bazaar");
 const { SERVICES, NETWORK_MAINNET } = require("./registry");
+const { withReadMethodGates } = require("./method-gates.cjs");
 
 const DISPATCH_PRICE = process.env.DISPATCH_PRICE || "$0.50";
 // Buyer-side settlement hint emitted in the 402 challenge (metadata only —
@@ -762,7 +763,7 @@ app.post("/a2a", (req, res) => {
   return res.json({ jsonrpc: "2.0", id, error: { code: -32601, message: "Method not found: supported are SendMessage (v1), message/send (v0.3), GetAgentCard" } });
 });
 
-app.use(paymentMiddleware(routesConfig, x402Server, undefined, undefined, false));
+app.use(paymentMiddleware(withReadMethodGates(routesConfig), x402Server, undefined, undefined, false));
 
 // Ledger — append-only stdout line per paid dispatch (captured by fly logs).
 app.use((req, res, next) => {
