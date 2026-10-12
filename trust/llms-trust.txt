@@ -1,0 +1,7 @@
+## Trust and policies
+- Terms: /terms
+- Privacy: /privacy
+- Refunds and disputes: /refunds
+- Contact: {{SUPPORT_EMAIL}} (/contact)
+- Seller: {{SELLER_LEGAL_NAME}}
+- Network/asset: Base (eip155:8453), USDC 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913; payTo as in /.well-known/x402.json
