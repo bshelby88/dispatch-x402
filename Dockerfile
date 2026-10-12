@@ -6,6 +6,6 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY index.js payment-config.cjs toon_middleware.js registry.js blockrun-arbitrage.cjs x402-verifier.cjs watchdog-attestation.cjs ./
 COPY trust-pages.js ./
-COPY trust ./trust
+COPY trust/terms.md trust/privacy.md trust/refunds.md trust/contact.md trust/llms-trust.txt ./trust/
 EXPOSE 3000
 CMD ["node", "index.js"]
