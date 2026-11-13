@@ -762,6 +762,62 @@ app.post("/a2a", (req, res) => {
   return res.json({ jsonrpc: "2.0", id, error: { code: -32601, message: "Method not found: supported are SendMessage (v1), message/send (v0.3), GetAgentCard" } });
 });
 
+// [QUOTE-FIX 2026-11-12] Third-party trust checkers (e.g. Lumi) and body-parsing
+// agents read the 402 BODY for price info. @x402/express returns an empty `{}` body
+// and puts the challenge only in the payment-required header. Enrich every 402:
+// decode the header challenge into the response body (single source of truth = the
+// header, so no drift). Template: royal-ruby-x402 commit a22a1d3.
+app.use((req, res, next) => {
+  const origEnd = res.end.bind(res);
+  res.end = function (chunk, encoding, cb) {
+    if (res.statusCode === 402) {
+      const text = chunk == null ? "" : String(chunk).trim();
+      const hasBody = text !== "" && text !== "{}";
+      const tok = res.getHeader("payment-required");
+      if (!hasBody && tok) {
+        try {
+          let b64 = String(tok).replace(/-/g, "+").replace(/_/g, "/");
+          while (b64.length % 4) b64 += "=";
+          const challenge = JSON.parse(Buffer.from(b64, "base64").toString("utf8"));
+          const body = JSON.stringify(challenge);
+          if (!res.headersSent) {
+            if (!res.getHeader("content-type")) res.setHeader("content-type", "application/json");
+            const cl = res.getHeader("content-length");
+            if (cl) res.setHeader("content-length", Buffer.byteLength(body));
+          }
+          chunk = body;
+          if (typeof encoding === "function") { cb = encoding; encoding = undefined; }
+          else if (typeof chunk === "string" && encoding == null) encoding = "utf8";
+        } catch (_) { /* keep original body on any decode failure */ }
+      }
+    }
+    return origEnd(chunk, encoding, cb);
+  };
+  next();
+});
+
+// [QUOTE-FIX 2026-11-12] GET on the paid route must return a machine-readable 402
+// quote, not 404 HTML "Cannot GET". Registered BEFORE paymentMiddleware: never
+// settles, never emits a payment-required header — body-only quote.
+app.get("/dispatch", (_req, res) => {
+  res.status(402).json({
+    ok: false,
+    error: "This x402 resource is paid and read via POST.",
+    quote: {
+      method: "POST",
+      path: "/dispatch",
+      scheme: "exact",
+      price: DISPATCH_PRICE + " per call",
+      asset: "USDC",
+      network: NETWORK,
+      payTo: PAY_TO,
+    },
+    how_to_pay:
+      "POST JSON {intent: \"<what you need>\"} WITHOUT payment to receive the 402 challenge (payment-required header AND body), then resend with the PAYMENT-SIGNATURE header (x402 scheme 'exact', Base eip155:8453).",
+    manifest: "/.well-known/x402.json",
+  });
+});
+
 app.use(paymentMiddleware(routesConfig, x402Server, undefined, undefined, false));
 
 // Ledger — append-only stdout line per paid dispatch (captured by fly logs).
