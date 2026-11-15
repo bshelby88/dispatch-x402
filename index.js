@@ -228,6 +228,9 @@ x402Server.register(NETWORK, new ExactEvmScheme());
 })();
 
 const app = express();
+// Trust pages (/terms /privacy /refunds /contact + llms.txt trust section): free, mounted ABOVE paid middleware.
+// 404 (or pass-through) unless SELLER_LEGAL_NAME and SUPPORT_EMAIL are set and trust/*.md has no [BRYANT markers.
+app.use(require("./trust-pages").create());
 app.set("trust proxy", true);
 app.use(express.json({ limit: "1mb" }));
 app.use(toonMiddleware);
