@@ -573,7 +573,7 @@ const dispatchRoute = {
   },
 };
 
-const routesConfig = { "POST /dispatch": dispatchRoute };
+const routesConfig = { "POST /dispatch": dispatchRoute, "GET /dispatch": dispatchRoute };
 
 // discovery endpoints
 const serviceInfo = {
@@ -763,19 +763,39 @@ app.post("/a2a", (req, res) => {
   return res.json({ jsonrpc: "2.0", id, error: { code: -32601, message: "Method not found: supported are SendMessage (v1), message/send (v0.3), GetAgentCard" } });
 });
 
+// STACI settlement telemetry (Nov 2026): funnel events -> settlement-collector
+app.use(require("./settlement-telemetry.cjs")({
+  service: "dispatch",
+  priceMap: { "/dispatch": 0.50 },
+}));
+
+// [402-INSTRUCTIONS] Bean 2026-11-15 (TEN-PLANS Plan 1): every 402 body must tell
+// the buyer how to complete the settle -> retry -> claim flow. Root cause: the only
+// external payer settled on-chain and never retried - the 402 body told them nothing.
+// Registered BEFORE paymentMiddleware (and after the quote-fix header-decode wrapper)
+// so this res.end hook runs LAST on every 402, incl. the middleware's own emission.
+const PAYMENT_INSTRUCTIONS_402 = {
+  step_1: "Settle on-chain: send the exact USDC amount to payTo on eip155:8453 (EIP-3009 transferWithAuthorization, x402 'exact' scheme).",
+  step_2: "REPEAT your original request with header 'x-payment' set to the base64 settlement payload from your x402 client. You will then receive the paid response.",
+  already_settled: "If you already settled on-chain but never got your result, claim it at https://settlement-collector.fly.dev/storefront/claims with your tx hash.",
+  docs: "https://bshelby88.github.io/x402-cookbook/",
+};
 app.use((req, res, next) => {
   const origEnd = res.end.bind(res);
   res.end = function (chunk, encoding, cb) {
     if (res.statusCode === 402) {
-      const text = chunk == null ? "" : String(chunk).trim();
-      const hasBody = text !== "" && text !== "{}";
-      const tok = res.getHeader("payment-required");
-      if (!hasBody && tok) {
-        try {
+      try {
+        let text = chunk == null ? "" : String(chunk).trim();
+        const tok = res.getHeader("payment-required");
+        if ((text === "" || text === "{}") && tok) {
           let b64 = String(tok).replace(/-/g, "+").replace(/_/g, "/");
           while (b64.length % 4) b64 += "=";
-          const challenge = JSON.parse(Buffer.from(b64, "base64").toString("utf8"));
-          const body = JSON.stringify(challenge);
+          text = JSON.stringify(JSON.parse(Buffer.from(b64, "base64").toString("utf8")));
+        }
+        const parsed = JSON.parse(text);
+        if (parsed && typeof parsed === "object" && !Array.isArray(parsed) && !parsed.payment_instructions) {
+          parsed.payment_instructions = PAYMENT_INSTRUCTIONS_402;
+          const body = JSON.stringify(parsed);
           if (!res.headersSent) {
             if (!res.getHeader("content-type")) res.setHeader("content-type", "application/json");
             const cl = res.getHeader("content-length");
@@ -783,16 +803,16 @@ app.use((req, res, next) => {
           }
           chunk = body;
           if (typeof encoding === "function") { cb = encoding; encoding = undefined; }
-          else if (typeof chunk === "string" && encoding == null) encoding = "utf8";
-        } catch (_) { /* keep original body on any decode failure */ }
-      }
+          else if (encoding == null) encoding = "utf8";
+        }
+      } catch (_) { /* non-JSON or headerless 402: leave untouched */ }
     }
     return origEnd(chunk, encoding, cb);
   };
   next();
 });
 
-app.use(paymentMiddleware(withReadMethodGates(routesConfig), x402Server, undefined, undefined, false));
+app.use(paymentMiddleware(routesConfig, x402Server, undefined, undefined, false));
 
 // Ledger — append-only stdout line per paid dispatch (captured by fly logs).
 app.use((req, res, next) => {
