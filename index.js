@@ -16,6 +16,7 @@ const { x402ResourceServer, HTTPFacilitatorClient } = require("@x402/core/server
 const { ExactEvmScheme } = require("@x402/evm/exact/server");
 const { declareDiscoveryExtension } = require("@x402/extensions/bazaar");
 const { SERVICES, NETWORK_MAINNET } = require("./registry");
+const { withReadMethodGates } = require("./method-gates.cjs");
 
 const DISPATCH_PRICE = process.env.DISPATCH_PRICE || "$0.50";
 // Buyer-side settlement hint emitted in the 402 challenge (metadata only —
@@ -762,11 +763,6 @@ app.post("/a2a", (req, res) => {
   return res.json({ jsonrpc: "2.0", id, error: { code: -32601, message: "Method not found: supported are SendMessage (v1), message/send (v0.3), GetAgentCard" } });
 });
 
-// [QUOTE-FIX 2026-11-12] Third-party trust checkers (e.g. Lumi) and body-parsing
-// agents read the 402 BODY for price info. @x402/express returns an empty `{}` body
-// and puts the challenge only in the payment-required header. Enrich every 402:
-// decode the header challenge into the response body (single source of truth = the
-// header, so no drift). Template: royal-ruby-x402 commit a22a1d3.
 app.use((req, res, next) => {
   const origEnd = res.end.bind(res);
   res.end = function (chunk, encoding, cb) {
@@ -796,29 +792,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// [QUOTE-FIX 2026-11-12] GET on the paid route must return a machine-readable 402
-// quote, not 404 HTML "Cannot GET". Registered BEFORE paymentMiddleware: never
-// settles, never emits a payment-required header — body-only quote.
-app.get("/dispatch", (_req, res) => {
-  res.status(402).json({
-    ok: false,
-    error: "This x402 resource is paid and read via POST.",
-    quote: {
-      method: "POST",
-      path: "/dispatch",
-      scheme: "exact",
-      price: DISPATCH_PRICE + " per call",
-      asset: "USDC",
-      network: NETWORK,
-      payTo: PAY_TO,
-    },
-    how_to_pay:
-      "POST JSON {intent: \"<what you need>\"} WITHOUT payment to receive the 402 challenge (payment-required header AND body), then resend with the PAYMENT-SIGNATURE header (x402 scheme 'exact', Base eip155:8453).",
-    manifest: "/.well-known/x402.json",
-  });
-});
-
-app.use(paymentMiddleware(routesConfig, x402Server, undefined, undefined, false));
+app.use(paymentMiddleware(withReadMethodGates(routesConfig), x402Server, undefined, undefined, false));
 
 // Ledger — append-only stdout line per paid dispatch (captured by fly logs).
 app.use((req, res, next) => {
