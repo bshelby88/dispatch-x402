@@ -763,6 +763,35 @@ app.post("/a2a", (req, res) => {
   return res.json({ jsonrpc: "2.0", id, error: { code: -32601, message: "Method not found: supported are SendMessage (v1), message/send (v0.3), GetAgentCard" } });
 });
 
+app.use((req, res, next) => {
+  const origEnd = res.end.bind(res);
+  res.end = function (chunk, encoding, cb) {
+    if (res.statusCode === 402) {
+      const text = chunk == null ? "" : String(chunk).trim();
+      const hasBody = text !== "" && text !== "{}";
+      const tok = res.getHeader("payment-required");
+      if (!hasBody && tok) {
+        try {
+          let b64 = String(tok).replace(/-/g, "+").replace(/_/g, "/");
+          while (b64.length % 4) b64 += "=";
+          const challenge = JSON.parse(Buffer.from(b64, "base64").toString("utf8"));
+          const body = JSON.stringify(challenge);
+          if (!res.headersSent) {
+            if (!res.getHeader("content-type")) res.setHeader("content-type", "application/json");
+            const cl = res.getHeader("content-length");
+            if (cl) res.setHeader("content-length", Buffer.byteLength(body));
+          }
+          chunk = body;
+          if (typeof encoding === "function") { cb = encoding; encoding = undefined; }
+          else if (typeof chunk === "string" && encoding == null) encoding = "utf8";
+        } catch (_) { /* keep original body on any decode failure */ }
+      }
+    }
+    return origEnd(chunk, encoding, cb);
+  };
+  next();
+});
+
 app.use(paymentMiddleware(withReadMethodGates(routesConfig), x402Server, undefined, undefined, false));
 
 // Ledger — append-only stdout line per paid dispatch (captured by fly logs).
