@@ -229,6 +229,7 @@ x402Server.register(NETWORK, new ExactEvmScheme());
 })();
 
 const app = express();
+require("./root-handshake.cjs").installRootHandshake(app); // FRONT DOOR: Accept: application/json on / returns the machine handshake (Nov 16)
 app.set("trust proxy", true);
 app.use(express.json({ limit: "1mb" }));
 app.use(toonMiddleware);

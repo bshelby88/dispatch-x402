@@ -5,5 +5,6 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY index.js method-gates.cjs payment-config.cjs toon_middleware.js registry.js blockrun-arbitrage.cjs x402-verifier.cjs watchdog-attestation.cjs settlement-telemetry.cjs ./
+COPY root-handshake.cjs ./
 EXPOSE 3000
 CMD ["node", "index.js"]
